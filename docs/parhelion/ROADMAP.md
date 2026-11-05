@@ -28,3 +28,6 @@ Only check boxes after evidence exists. A newly committed CI workflow is **not**
 
 
 **P1 source work completed 2026-11-05:** Four distinct exterior blockmaps + a separate copied house interior, registered map groups/layouts, connections, home warp and storm-fallen gate. Compilation and interactive navigation have not been verified, so P1 is not yet accepted.
+
+
+**Map visibility (2026-11-05):** source-grid schematic produced locally; real tileset preview renderer and GitHub Actions artifact workflow committed, **not yet run/inspected**. Emulator screenshots remain pending.

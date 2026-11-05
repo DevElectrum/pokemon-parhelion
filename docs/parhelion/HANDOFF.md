@@ -37,3 +37,7 @@ Read `AGENTS.md`, `CANON.md`, `PROLOGUE.md` and `ROADMAP.md`. Respect existing G
 Map-source batch added five Porymap-style maps and layouts: `ParhelionRescueWoods`, `ParhelionHomestead`, `ParhelionTownPath`, `ParhelionFirstTown`, `ParhelionHomeInterior`. Four exterior grids are original authored arrangements of temporary Emerald tiles, with map connections; house interior duplicates House1 tiles as a separate editable layout. See `docs/parhelion/maps/OVERVIEW.md` for dimensions and text previews. Homestead's storm-fallen-tree gate is hidden when `FLAG_PARHELION_TOWN_PATH_OPEN` gets set **by future story scripts**.
 
 **Not yet proven:** compiled ROM, emulator movement, NPC art, new game start location, rescue scene and first battle. Base game still starts at original intro. Next: compile once and verify essential connections; then implement prologue scripts. No loop of speculative tests.
+
+### Map preview workflow
+
+Parhelion now has `scripts/render_parhelion_maps.py` plus `.github/workflows/map-previews.yml` to render PNGs directly from committed source metatiles. The user has a separate source-grid schematic image too. Actual tile PNG outputs and emulator captures remain **unverified until the workflow runs**. See maps/OVERVIEW.md for usage. Do not confuse the original upstream CI (successful on base commit) with a build of these new maps.

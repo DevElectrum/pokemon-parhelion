@@ -137,3 +137,12 @@ These are *source-grid previews*, not emulator screenshots. Final map section na
 ############################
 ############################
 ```
+
+
+## Real-tileset source visualization pipeline
+
+`scripts/render_parhelion_maps.py` now reads the actual binary layout and tileset art (indexed PNGs, JASC palettes and 8-tile metatile definitions) and creates one PNG per map plus `all_parhelion_maps.png`. It draws **annotation markers** for the rescue tile, confrontation tile and fallen-tree object-event positions, not runtime NPC sprites.
+
+You can run it locally using `python3 -m pip install Pillow` followed by `python3 scripts/render_parhelion_maps.py --out preview`. GitHub Actions `map-previews.yml` can render and upload the PNGs as an artifact, with a manual **Run workflow** action.
+
+**This is still not an in-game screenshot.** Runtime animation, collision effects, object sprite art, cutscenes and the GBA renderer may differ. Full emulator screenshots require a compiled ROM, a reliable warp/spawn into these maps and an emulator capture. Before claiming success, inspect the actual generated PNG artifact and, later, emulator footage. No successful new Actions run for current Parhelion commits has been observed as of authoring.

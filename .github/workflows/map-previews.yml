@@ -1,0 +1,33 @@
+name: Parhelion map previews
+
+on:
+  workflow_dispatch:
+  push:
+    branches: [master]
+    paths:
+      - "data/maps/Parhelion*/**"
+      - "data/layouts/Parhelion*/**"
+      - "data/tilesets/**"
+      - "scripts/render_parhelion_maps.py"
+      - ".github/workflows/map-previews.yml"
+
+jobs:
+  render-maps:
+    name: Render source maps
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Install Pillow
+        run: python -m pip install "Pillow>=10,<13"
+      - name: Render all five maps from source assets
+        run: python scripts/render_parhelion_maps.py --out preview
+      - name: Publish preview PNGs
+        uses: actions/upload-artifact@v4
+        with:
+          name: parhelion-map-previews
+          path: preview/*.png
+          if-no-files-found: error
+          retention-days: 14
