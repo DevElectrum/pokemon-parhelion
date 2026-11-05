@@ -600,6 +600,14 @@ gStdScripts_End::
 	.include "data/maps/Route119_House/scripts.inc"
 	.include "data/maps/Route124_DivingTreasureHuntersHouse/scripts.inc"
 
+@ Parhelion maps (Emerald build only)
+	@ Parhelion opening maps
+	.include "data/maps/ParhelionRescueWoods/scripts.inc"
+	.include "data/maps/ParhelionHomestead/scripts.inc"
+	.include "data/maps/ParhelionTownPath/scripts.inc"
+	.include "data/maps/ParhelionFirstTown/scripts.inc"
+	.include "data/maps/ParhelionHomeInterior/scripts.inc"
+
 .if IS_FRLG
 
 @ FRLG scripts
@@ -1022,12 +1030,6 @@ gStdScripts_End::
 	.include "data/maps/SixIsland_WaterPath_House2_Frlg/scripts.inc"
 	.include "data/maps/SevenIsland_SevaultCanyon_House_Frlg/scripts.inc"
 
-	@ Parhelion opening maps
-	.include "data/maps/ParhelionRescueWoods/scripts.inc"
-	.include "data/maps/ParhelionHomestead/scripts.inc"
-	.include "data/maps/ParhelionTownPath/scripts.inc"
-	.include "data/maps/ParhelionFirstTown/scripts.inc"
-	.include "data/maps/ParhelionHomeInterior/scripts.inc"
 
 	.include "data/scripts/trainer_tower.inc"
 	.include "data/scripts/fame_checker_frlg.inc"
