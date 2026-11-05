@@ -31,3 +31,14 @@ Only check boxes after evidence exists. A newly committed CI workflow is **not**
 
 
 **Map visibility (2026-11-05):** source-grid schematic produced locally; real tileset preview renderer and GitHub Actions artifact workflow committed, **not yet run/inspected**. Emulator screenshots remain pending.
+
+
+## Source visual gate verified on 2026-11-05
+
+- **Refined four-exterior-map source-art render succeeded:** GitHub Actions run [42112246709](https://github.com/DevElectrum/pokemon-parhelion/actions/runs/42112246709), commit `7ac7788`.
+- Its `parhelion-map-previews` artifact contains five individual PNGs and a contact sheet, reconstructed from actual `map.bin`, tilesets, metatiles and JASC palettes.
+- Human visual inspection confirmed the initial flower-railroad defect was corrected: paths now use normal grass and sparse flowers. The homestead, rescue clearing, connecting trail, small town and house interior all appear in the preview.
+- **Not an emulator capture:** object sprites, movement, new-game spawn, door entry, collision behavior, save/continue and the first battle have not been explored in-game. The current base-game intro still launches first.
+- Existing Emerald build run [42111570036](https://github.com/DevElectrum/pokemon-parhelion/actions/runs/42111570036) passed on a map-preview renderer commit; newer source compilation runs may still be in progress. Do not infer acceptance for the latest head until its specific build is green.
+
+**Next substantial gameplay batch:** wire the Parhelion starting position, then implement the opening rescue/recovery and one criminal confrontation with the four selected starters. Do not spend more work polishing temporary Emerald foliage or performing redundant CI reruns.

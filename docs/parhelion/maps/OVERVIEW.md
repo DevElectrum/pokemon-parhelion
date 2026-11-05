@@ -150,3 +150,14 @@ You can run it locally using `python3 -m pip install Pillow` followed by `python
 ## First source-art visual review
 
 GitHub Actions successfully rendered the original map binaries as actual Emerald tileset PNGs (run 42111218595). The first visual review exposed continuous flowers along all paths. The map blockdata now replaces those flower trails with walkable grass and a handful of deliberately placed flower accents. A new preview workflow run should show the corrected result. The optional `--atlas` argument in the map renderer generates tile-id contact sheets for future terrain selection, but is no longer run on every map update.
+
+
+## Source visual gate verified on 2026-11-05
+
+- **Refined four-exterior-map source-art render succeeded:** GitHub Actions run [42112246709](https://github.com/DevElectrum/pokemon-parhelion/actions/runs/42112246709), commit `7ac7788`.
+- Its `parhelion-map-previews` artifact contains five individual PNGs and a contact sheet, reconstructed from actual `map.bin`, tilesets, metatiles and JASC palettes.
+- Human visual inspection confirmed the initial flower-railroad defect was corrected: paths now use normal grass and sparse flowers. The homestead, rescue clearing, connecting trail, small town and house interior all appear in the preview.
+- **Not an emulator capture:** object sprites, movement, new-game spawn, door entry, collision behavior, save/continue and the first battle have not been explored in-game. The current base-game intro still launches first.
+- Existing Emerald build run [42111570036](https://github.com/DevElectrum/pokemon-parhelion/actions/runs/42111570036) passed on a map-preview renderer commit; newer source compilation runs may still be in progress. Do not infer acceptance for the latest head until its specific build is green.
+
+**Next substantial gameplay batch:** wire the Parhelion starting position, then implement the opening rescue/recovery and one criminal confrontation with the four selected starters. Do not spend more work polishing temporary Emerald foliage or performing redundant CI reruns.
