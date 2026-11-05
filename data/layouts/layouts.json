@@ -9323,6 +9323,61 @@
       "border_filepath": "data/layouts/OneIsland_KindleRoad_EmberSpa_Frlg/border.bin",
       "blockdata_filepath": "data/layouts/OneIsland_KindleRoad_EmberSpa_Frlg/map.bin",
       "layout_version": "frlg"
+    },
+    {
+      "id": "LAYOUT_PARHELION_RESCUE_WOODS",
+      "name": "ParhelionRescueWoods_Layout",
+      "width": 28,
+      "height": 24,
+      "primary_tileset": "gTileset_General",
+      "secondary_tileset": "gTileset_Petalburg",
+      "border_filepath": "data/layouts/ParhelionRescueWoods/border.bin",
+      "blockdata_filepath": "data/layouts/ParhelionRescueWoods/map.bin",
+      "layout_version": "emerald"
+    },
+    {
+      "id": "LAYOUT_PARHELION_HOMESTEAD",
+      "name": "ParhelionHomestead_Layout",
+      "width": 28,
+      "height": 24,
+      "primary_tileset": "gTileset_General",
+      "secondary_tileset": "gTileset_Petalburg",
+      "border_filepath": "data/layouts/ParhelionHomestead/border.bin",
+      "blockdata_filepath": "data/layouts/ParhelionHomestead/map.bin",
+      "layout_version": "emerald"
+    },
+    {
+      "id": "LAYOUT_PARHELION_TOWN_PATH",
+      "name": "ParhelionTownPath_Layout",
+      "width": 28,
+      "height": 24,
+      "primary_tileset": "gTileset_General",
+      "secondary_tileset": "gTileset_Petalburg",
+      "border_filepath": "data/layouts/ParhelionTownPath/border.bin",
+      "blockdata_filepath": "data/layouts/ParhelionTownPath/map.bin",
+      "layout_version": "emerald"
+    },
+    {
+      "id": "LAYOUT_PARHELION_FIRST_TOWN",
+      "name": "ParhelionFirstTown_Layout",
+      "width": 28,
+      "height": 24,
+      "primary_tileset": "gTileset_General",
+      "secondary_tileset": "gTileset_Petalburg",
+      "border_filepath": "data/layouts/ParhelionFirstTown/border.bin",
+      "blockdata_filepath": "data/layouts/ParhelionFirstTown/map.bin",
+      "layout_version": "emerald"
+    },
+    {
+      "id": "LAYOUT_PARHELION_HOME_INTERIOR",
+      "name": "ParhelionHomeInterior_Layout",
+      "width": 10,
+      "height": 9,
+      "primary_tileset": "gTileset_Building",
+      "secondary_tileset": "gTileset_GenericBuilding",
+      "border_filepath": "data/layouts/ParhelionHomeInterior/border.bin",
+      "blockdata_filepath": "data/layouts/ParhelionHomeInterior/map.bin",
+      "layout_version": "emerald"
     }
   ]
 }

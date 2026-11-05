@@ -31,3 +31,9 @@ Town/region names and actual map shapes; player art details; ordinary first-batt
 ## Working rules
 
 Read `AGENTS.md`, `CANON.md`, `PROLOGUE.md` and `ROADMAP.md`. Respect existing Grand Anthology/Mosaic/XGBA boundaries. Avoid megabatch planning, premature claims and test-loop perfectionism. Keep substantive milestones and concise verifiable reports.
+
+## Opening terrain authored
+
+Map-source batch added five Porymap-style maps and layouts: `ParhelionRescueWoods`, `ParhelionHomestead`, `ParhelionTownPath`, `ParhelionFirstTown`, `ParhelionHomeInterior`. Four exterior grids are original authored arrangements of temporary Emerald tiles, with map connections; house interior duplicates House1 tiles as a separate editable layout. See `docs/parhelion/maps/OVERVIEW.md` for dimensions and text previews. Homestead's storm-fallen-tree gate is hidden when `FLAG_PARHELION_TOWN_PATH_OPEN` gets set **by future story scripts**.
+
+**Not yet proven:** compiled ROM, emulator movement, NPC art, new game start location, rescue scene and first battle. Base game still starts at original intro. Next: compile once and verify essential connections; then implement prologue scripts. No loop of speculative tests.

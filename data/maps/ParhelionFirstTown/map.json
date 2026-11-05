@@ -1,0 +1,27 @@
+{
+  "id": "MAP_PARHELION_FIRST_TOWN",
+  "name": "ParhelionFirstTown",
+  "layout": "LAYOUT_PARHELION_FIRST_TOWN",
+  "music": "MUS_OLDALE",
+  "region": "REGION_HOENN",
+  "region_map_section": "MAPSEC_OLDALE_TOWN",
+  "requires_flash": false,
+  "weather": "WEATHER_SUNNY",
+  "map_type": "MAP_TYPE_TOWN",
+  "allow_cycling": false,
+  "allow_escaping": false,
+  "allow_running": true,
+  "show_map_name": false,
+  "battle_scene": "MAP_BATTLE_SCENE_NORMAL",
+  "connections": [
+    {
+      "map": "MAP_PARHELION_TOWN_PATH",
+      "offset": 0,
+      "direction": "up"
+    }
+  ],
+  "object_events": [],
+  "warp_events": [],
+  "coord_events": [],
+  "bg_events": []
+}

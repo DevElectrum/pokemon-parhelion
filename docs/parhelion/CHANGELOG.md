@@ -1,5 +1,13 @@
 # Parhelion development changelog
 
+## 2026-11-05 — first terrain source batch
+
+- Added four original 28×24 outdoor terrain layouts, five map definitions, house-interior copy, map connections and warps.
+- Added homestead gate: two storm-fallen trees blocked until the future first-battle completion flag is set.
+- Added in-repo ASCII layout previews and handoff notes.
+- Source authored, but **not yet compiled or played**; no custom art or story scripts completed.
+
+
 ## 2026-11-05 — F0 foundation
 
 - Adopt **Pokémon Parhelion** as the official project name.

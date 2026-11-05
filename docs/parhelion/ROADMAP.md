@@ -25,3 +25,6 @@ Do **not** start all acts, full world maps, the rank-duel engine, exotic rendere
 - [ ] Original art accepted in game.
 
 Only check boxes after evidence exists. A newly committed CI workflow is **not** itself a passed CI result.
+
+
+**P1 source work completed 2026-11-05:** Four distinct exterior blockmaps + a separate copied house interior, registered map groups/layouts, connections, home warp and storm-fallen gate. Compilation and interactive navigation have not been verified, so P1 is not yet accepted.

@@ -36,3 +36,6 @@ These are **working map identifiers**, not final internal map constants or regio
 8. All displayed art passes actual emulator-resolution/palette inspection.
 
 **Deferred:** full regional map, nobility implementation, the Gen 9 lab, later NPC cast, UB/Terastal mechanical demonstrations and multi-region travel.
+
+
+**Map adjustment:** The three-map placeholder has become **four exterior maps + house interior** to isolate the player's home from town. The town path is gated at the homestead until the opening battle's aftermath (future scripted flag). See `docs/parhelion/maps/OVERVIEW.md`.
