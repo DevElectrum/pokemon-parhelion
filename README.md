@@ -1,53 +1,36 @@
-# About `pokeemerald-expansion`
+# Pokémon Parhelion
 
-![Gif that shows debugging functionality that is unique to pokeemerald-expansion such as rerolling Trainer ID, Cheat Start, PC from Debug Menu, Debug PC Fill, Pokémon Sprite Visualizer, Debug Warp to Map, and Battle Debug Menu](https://github.com/user-attachments/assets/cf9dfbee-4c6b-4bca-8e0a-07f116ef891c) ![Gif that shows overworld functionality that is unique to pokeemerald-expansion such as indoor running, BW2 style map popups, overworld followers, DNA Splicers, Gen 1 style fishing, OW Item descriptions, Quick Run from Battle, Use Last Ball, Wild Double Battles, and Catch from EXP](https://github.com/user-attachments/assets/383af243-0904-4d41-bced-721492fbc48e) ![Gif that shows off a number of modern Pokémon battle mechanics happening in the pokeemerald-expansion engine: 2 vs 1 battles, modern Pokémon, items, moves, abilities, fully customizable opponents and partners, Trainer Slides, and generational gimmicks](https://github.com/user-attachments/assets/50c576bc-415e-4d66-a38f-ad712f3316be)
+**Pokémon Parhelion** is an in-development, fan-made GBA Pokémon adventure set across two hostile regions separated by a dangerous central No Man's Land. It is a **new, independent project**, not a continuation of Grand Anthology, Pokémon Mosaic, or XGBA.
 
-<!-- If you want to re-record or change these gifs, here are some notes that I used: https://files.catbox.moe/05001g.md -->
+> **Status (2026-11-05): Foundation only.** This repository currently contains the unmodified gameplay engine plus Parhelion planning/build infrastructure. No original Parhelion maps, encounters, dialogue, character sprites, or playable prologue have been implemented. A compiled base ROM is not equivalent to a playable Parhelion demo.
 
-**`pokeemerald-expansion`** is a GBA ROM hack base that equips developers with a comprehensive toolkit for creating Pokémon ROM hacks. **`pokeemerald-expansion`** is built on top of [pret's `pokeemerald`](https://github.com/pret/pokeemerald) decompilation project. **It is not a playable Pokémon game on its own.**
+## The first milestone
 
-# [Features](FEATURES.md)
+A short playable prologue: choose one of four wounded companion Pokémon; see its escape during a thunderstorm; rescue and care for it; encounter the criminals searching for it; win the **first ordinary trainer battle** near the protagonist's home; save and continue. We are **not** plotting or implementing the entire game before this first slice.
 
-**`pokeemerald-expansion`** offers hundreds of features from various [core series Pokémon games](https://bulbapedia.bulbagarden.net/wiki/Core_series), along with popular quality-of-life enhancements designed to streamline development and improve the player experience. A full list of those features can be found in [`FEATURES.md`](FEATURES.md).
+Start here:
+- [Handoff and state](docs/parhelion/HANDOFF.md)
+- [Design canon](docs/parhelion/CANON.md)
+- [Prologue requirements](docs/parhelion/PROLOGUE.md)
+- [Art and NPC pipeline](docs/parhelion/ART_PIPELINE.md)
+- [Roadmap and acceptance gates](docs/parhelion/ROADMAP.md)
+- [Pinned upstream baseline](docs/parhelion/BASELINE.md)
+- [Agent/developer instructions](AGENTS.md)
 
-# [Credits](CREDITS.md)
+## Building the base
 
- [![](https://img.shields.io/github/all-contributors/rh-hideout/pokeemerald-expansion/upcoming)](CREDITS.md)
+This project currently uses [RHH's `pokeemerald-expansion`](https://github.com/rh-hideout/pokeemerald-expansion) on the Emerald target. The initial upstream base is pinned by commit in [BASELINE.md](docs/parhelion/BASELINE.md).
 
-If you use **`pokeemerald-expansion`**, please credit **RHH (Rom Hacking Hideout)**. Optionally, include the version number for clarity.
+On Ubuntu / Pop!_OS, follow the upstream [Linux setup guide](docs/install/linux/UBUNTU.md), then run:
 
+```sh
+make -j"$(nproc)"
 ```
-Based off RHH's pokeemerald-expansion 1.17.2 https://github.com/rh-hideout/pokeemerald-expansion/
-```
 
-Please consider [crediting all contributors](CREDITS.md) involved in the project!
+The normal output is `pokeemerald.gba`. The GitHub Actions workflow checks that an Emerald-target base ROM compiles, **not** that the opening story is playable or that a human-verified emulator boot occurred. Do not commit built ROMs, save files, or non-permitted proprietary assets.
 
-# Choosing `pokeemerald` or **`pokeemerald-expansion`**
+The project retains upstream [INSTALL.md](INSTALL.md), [FEATURES.md](FEATURES.md), [CONTRIBUTING.md](CONTRIBUTING.md), and [CREDITS.md](CREDITS.md).
 
-- **`pokeemerald-expansion`** supports multiplayer functionality with other games built on **`pokeemerald-expansion`**. It is not compatible with official Pokémon games.
-- If compatibility with official games is important, use [`pokeemerald`](https://github.com/pret/pokeemerald). Otherwise, we recommend using **`pokeemerald-expansion`**.
-- **`pokeemerald-expansion`** incorporates regular updates from `pokeemerald`, including bug fixes and documentation improvements.
+## Attribution
 
-# [Getting Started](INSTALL.md)
-
-❗❗ **Important**: Do not use GitHub's "Download Zip" option as it will not include commit history. This is necessary if you want to update or merge other feature branches.
-
-If you're new to git and GitHub, [Team Aqua's Asset Repo](https://github.com/Pawkkie/Team-Aquas-Asset-Repo/) has a [guide to forking and cloning the repository](https://github.com/Pawkkie/Team-Aquas-Asset-Repo/wiki/The-Basics-of-GitHub). Then you can follow one of the following guides:
-
-## 📥 [Installing **`pokeemerald-expansion`**](INSTALL.md)
-## 🏗️ [Building **`pokeemerald-expansion`**](INSTALL.md#Building-pokeemerald-expansion)
-## 🚚 [Migrating from **`pokeemerald`**](INSTALL.md#Migrating-from-pokeemerald)
-## 🚀 [Updating **`pokeemerald-expansion`**](INSTALL.md#Updating-pokeemerald-expansion)
-
-# [Documentation](https://rh-hideout.github.io/pokeemerald-expansion/)
-
-For detailed documentation, visit the [pokeemerald-expansion documentation page](https://rh-hideout.github.io/pokeemerald-expansion/).
-
-# [Contributions](CONTRIBUTING.md)
-If you are looking to [report a bug](CONTRIBUTING.md#Bug-Report), [open a pull request](CONTRIBUTING.md#Pull-Requests), or [request a feature](CONTRIBUTING.md#Feature-Request), our [`CONTRIBUTING.md`](CONTRIBUTING.md) has guides for each.
-
-# [Community](https://discord.gg/6CzjAG6GZk)
-
-[![](https://dcbadge.limes.pink/api/server/6CzjAG6GZk)](https://discord.gg/6CzjAG6GZk)
-
-Our community uses the [ROM Hacking Hideout (RHH) Discord server](https://discord.gg/6CzjAG6GZk) to communicate and organize. Most of our discussions take place there, and we welcome anybody to join us!
+Built on **Rom Hacking Hideout's `pokeemerald-expansion`** and the `pret/pokeemerald` decompilation. Please preserve all original credits and notices. Pokémon and related trademarks/art belong to their respective rights holders; this is an unofficial fan project, not affiliated with or endorsed by Nintendo, Game Freak, or The Pokémon Company.
