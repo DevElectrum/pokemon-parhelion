@@ -154,8 +154,14 @@ def make_metatile_atlas(root, output):
         for i in range(count):
             idx = start + i
             x, y = (i % cols)*cw, (i // cols)*ch
-            tile = tiles.metatile(idx).resize((40, 40), Image.Resampling.NEAREST)
-            board.paste(tile.convert("RGB"), (x+15, y+2))
+            try:
+                tile = tiles.metatile(idx).resize((40, 40), Image.Resampling.NEAREST)
+            except ValueError:
+                # Some unused upstream metatiles reference graphics outside the
+                # compressed static sheet; live maps do not use those entries.
+                draw.rectangle((x+15, y+2, x+54, y+41), fill="#D9C9C2")
+            else:
+                board.paste(tile.convert("RGB"), (x+15, y+2))
             draw.text((x+19,y+44), f"{idx:03X}", fill="#25312B")
         board.save(output / f"metatile_atlas_{tag}.png")
 
