@@ -41,3 +41,7 @@ Map-source batch added five Porymap-style maps and layouts: `ParhelionRescueWood
 ### Map preview workflow
 
 Parhelion now has `scripts/render_parhelion_maps.py` plus `.github/workflows/map-previews.yml` to render PNGs directly from committed source metatiles. The user has a separate source-grid schematic image too. Actual tile PNG outputs and emulator captures remain **unverified until the workflow runs**. See maps/OVERVIEW.md for usage. Do not confuse the original upstream CI (successful on base commit) with a build of these new maps.
+
+### 2026-11-05 first visual refinement
+
+The map preview workflow **successfully rendered** source tiles and palettes. Visual review caught an inappropriate metatile: all route footprints appeared as dense flower trails. Corrected the four exterior blockmaps to clear turf plus small flower accents, without changing exits/gates. Review the next preview artifact before any 'final art' claim. Source art renders are not emulator screenshots.

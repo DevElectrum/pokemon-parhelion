@@ -1,5 +1,13 @@
 # Parhelion development changelog
 
+## 2026-11-05 — visual pass: natural footpaths
+
+- Source tileset PNG renderer succeeded in GitHub Actions; first actual-art previews revealed every marked footpath was a chain of flowers (general metatile `0x004`).
+- Replaced the continuous flower trails/plaza with walkable grass (`0x001`) plus sparse flower clusters and a compact town flowerbed.
+- Kept woodland clearings, gate locations, warps and map connectivity unchanged; these are still *temporary Emerald tiles* rather than original Parhelion artwork.
+- Removed automatic metatile-atlas rendering from routine map previews. The optional `--atlas` flag remains available for future artist selection. No emulator exploration claimed.
+
+
 ## 2026-11-05 — first terrain source batch
 
 - Added four original 28×24 outdoor terrain layouts, five map definitions, house-interior copy, map connections and warps.

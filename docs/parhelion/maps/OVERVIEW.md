@@ -146,3 +146,7 @@ These are *source-grid previews*, not emulator screenshots. Final map section na
 You can run it locally using `python3 -m pip install Pillow` followed by `python3 scripts/render_parhelion_maps.py --out preview`. GitHub Actions `map-previews.yml` can render and upload the PNGs as an artifact, with a manual **Run workflow** action.
 
 **This is still not an in-game screenshot.** Runtime animation, collision effects, object sprite art, cutscenes and the GBA renderer may differ. Full emulator screenshots require a compiled ROM, a reliable warp/spawn into these maps and an emulator capture. Before claiming success, inspect the actual generated PNG artifact and, later, emulator footage. No successful new Actions run for current Parhelion commits has been observed as of authoring.
+
+## First source-art visual review
+
+GitHub Actions successfully rendered the original map binaries as actual Emerald tileset PNGs (run 42111218595). The first visual review exposed continuous flowers along all paths. The map blockdata now replaces those flower trails with walkable grass and a handful of deliberately placed flower accents. A new preview workflow run should show the corrected result. The optional `--atlas` argument in the map renderer generates tile-id contact sheets for future terrain selection, but is no longer run on every map update.
