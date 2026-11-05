@@ -4,6 +4,7 @@ on:
   push:
     branches: [master]
   pull_request:
+  workflow_dispatch:
 
 env:
   GAME_VERSION: EMERALD
@@ -37,7 +38,7 @@ jobs:
           from pathlib import Path
           rom = Path("pokeemerald.gba").read_bytes()
           assert 0xC0 <= len(rom) <= 32 * 1024 * 1024, f"invalid standard GBA ROM size: {len(rom)}"
-          title = rom[0xA0:0xAC].rstrip(b"\\x00 ")
+          title = rom[0xA0:0xAC].rstrip(bytes((0, 32)))
           assert title, "missing GBA header title"
           print(f"ROM size: {len(rom)} bytes; header title: {title!r}")
           PY
