@@ -29,3 +29,17 @@ The local **NPC Sprite Lab v0.1** has demonstrated seeded 4-direction/3-frame pr
 - Track permission, attribution and hashes for every imported asset. Avoid unlicensed artwork and published compiled ROMs.
 
 Do not allow a beautiful standalone render to substitute for verified, animated in-engine assets.
+
+## Original environmental art priority (decision: 2026-11-05)
+
+**Confirmed direction:** The project needs its **own original map graphics and tilesets**, not merely altered maps constructed from standard Pokémon Emerald tiles. Temporary Emerald tiles remain useful for navigation scaffolding, but are not an acceptable final identity for Parhelion.
+
+**Working approach, not a locked visual specification:**
+- Produce an original **Starter Environment Pack 01** spanning homestead, rescue woods, town path, first town and the starter house interior.
+- Initial asset categories: ground/grass, natural paths, vegetation and tree edges, flower/shrub props, fences/rocks, house exteriors/roofs/doors/windows, modest settlement details and matching interior floor/walls/furniture. Reuse shared style and palette family.
+- Martial/industrial Gen 8-side architecture can have distinctive traditional/fortified influences; academic Gen 9-side city language stays distinct later. Exact colors, architecture and tile scale have **not** been chosen.
+- Generate or create original source artwork as concepts and modular sprite sheets; **then** refine for grid alignment, seamless edges, transparency, palette budgets, metatile grouping/behaviors, and GBA compilation.
+- Investigate Porytiles for art-to-GBA tile conversion and Porymap for visual map assembly. **Tool compatibility is not yet demonstrated against Parhelion's latest branch.**
+- Avoid creating the full two-region art library before finishing a small playable slice; prefer one reusable production-quality starter pack.
+
+**Current status: proposed pipeline, not implemented asset pack.** Do not run art generation or conversion while the user-requested pause is active.

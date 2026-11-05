@@ -42,3 +42,11 @@ Only check boxes after evidence exists. A newly committed CI workflow is **not**
 - Existing Emerald build run [42111570036](https://github.com/DevElectrum/pokemon-parhelion/actions/runs/42111570036) passed on a map-preview renderer commit; newer source compilation runs may still be in progress. Do not infer acceptance for the latest head until its specific build is green.
 
 **Next substantial gameplay batch:** wire the Parhelion starting position, then implement the opening rescue/recovery and one criminal confrontation with the four selected starters. Do not spend more work polishing temporary Emerald foliage or performing redundant CI reruns.
+
+## Development pause and visual direction (2026-11-05)
+
+**PAUSED by the user.** No map/script/art/CI changes should proceed until explicitly resumed.
+
+The next meaningful art decision is a **small, original environment tileset pack for the five existing opening maps**, replacing the current temporary Emerald graphics. See `ART_PIPELINE.md` and `TOOLING_AND_TILES.md`. These are **working production priorities**, not a commitment to build all assets before resuming playable-story development.
+
+The user explicitly prefers **less testing and more meaningful game creation**. Use focused validation once per significant, playable/content milestone. Do not build an emulator screenshot harness or new renderer when ordinary tools suffice.

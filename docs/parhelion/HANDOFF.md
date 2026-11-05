@@ -56,3 +56,22 @@ The map preview workflow **successfully rendered** source tiles and palettes. Vi
 - Existing Emerald build run [42111570036](https://github.com/DevElectrum/pokemon-parhelion/actions/runs/42111570036) passed on a map-preview renderer commit; newer source compilation runs may still be in progress. Do not infer acceptance for the latest head until its specific build is green.
 
 **Next substantial gameplay batch:** wire the Parhelion starting position, then implement the opening rescue/recovery and one criminal confrontation with the four selected starters. Do not spend more work polishing temporary Emerald foliage or performing redundant CI reruns.
+
+## STOP HERE — explicit user pause (2026-11-05)
+
+**User requested: "Just write to tree and stop. We'll continue when my brain doesn't feel like mush."** This pause supersedes earlier "next batch" suggestions in this file. No gameplay scripting, map editing, graphics generation, Porymap/Porytiles/MCP installation, CI triggering, or unsolicited follow-up work. Resume only on an explicit user request.
+
+### New creative direction
+
+The user wants **custom original maps and tiles**, rather than a game visually dependent on Emerald assets. Five opening maps already exist as layout files; these use Emerald tiles and are **temporary scaffold**. Plan for a compact **Starter Environment Pack 01** (homestead / rescue woods / woodland trail / first town / home interior) with original environment art. Source images alone are not equivalent to ready-to-use GBA tilesets: palette, alignment, seamless metatiles, collision/behavior and actual in-engine import still need to be handled. Stylistic choices have not been locked. See `docs/parhelion/ART_PIPELINE.md`.
+
+### Tool decision not yet made
+
+Investigated `hugomrts/porymap-mcp` (project describes v1.0.1 with 24 map/render/event tools). It edits Porymap-format project files directly and can render tile-based map PNGs; it **cannot** do live Porymap editing, does **not** offer dedicated connection editing or original tileset production, and this ChatGPT session **has no direct tool connection** to a local MCP process on Nyx. It is a possible future convenience, **not installed or adopted**. Porymap itself and Porytiles remain potential tooling. See `docs/parhelion/TOOLING_AND_TILES.md`.
+
+### Engineering reality at pause
+
+- Opening map structure: `ParhelionRescueWoods`, `ParhelionHomestead`, `ParhelionTownPath`, `ParhelionFirstTown`, `ParhelionHomeInterior`.
+- The source-art renderer previously produced valid visual previews, **not** emulator screenshots. Some map CI had passed on earlier commits; do not assume the latest head/gameplay was played.
+- **No original Parhelion environment tileset**, new-game spawn integration, playable rescue, recovery, or first criminal battle has been completed.
+- Key approach once user returns: choose a practical original-art workflow, use it to replace the opening area's placeholder visuals in a focused batch, then progress the playable prologue. **No marathon test loops.**

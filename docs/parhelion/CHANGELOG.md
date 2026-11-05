@@ -1,5 +1,14 @@
 # Parhelion development changelog
 
+## 2026-11-05 — pause handoff and original tileset direction
+
+- Documented user's explicit pause; no further game implementation authorized until resumed.
+- Recorded decision to develop **original Parhelion environment/map tilesets** rather than rely on stock Pokémon graphics.
+- Outlined a small reusable starter environment pack and distinguished source art from GBA-integrated metatiles.
+- Archived a code-based investigation of `porymap-mcp`, including compatibility opportunities and the current ChatGPT/Nyx connection limitation.
+- Updated `AGENTS.md`, art policy, roadmap and handoff. **Documentation only**; no installs, new map art, game-code edits or CI work.
+
+
 ## 2026-11-05 — visual pass: natural footpaths
 
 - Source tileset PNG renderer succeeded in GitHub Actions; first actual-art previews revealed every marked footpath was a chain of flowers (general metatile `0x004`).
