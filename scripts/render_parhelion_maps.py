@@ -143,16 +143,36 @@ def make_contact(images, path):
     canvas.save(path)
 
 
+def make_metatile_atlas(root, output):
+    tiles = Renderer(root, "general", "petalburg")
+    for tag, start, end in (("primary", 0x000, 0x100), ("petalburg", 0x200, 0x290)):
+        cols, cw, ch = 12, 70, 63
+        count = end - start
+        rows = (count + cols - 1) // cols
+        board = Image.new("RGB", (cols*cw, rows*ch), "#F1F0E9")
+        draw = ImageDraw.Draw(board)
+        for i in range(count):
+            idx = start + i
+            x, y = (i % cols)*cw, (i // cols)*ch
+            tile = tiles.metatile(idx).resize((40, 40), Image.Resampling.NEAREST)
+            board.paste(tile.convert("RGB"), (x+15, y+2))
+            draw.text((x+19,y+44), f"{idx:03X}", fill="#25312B")
+        board.save(output / f"metatile_atlas_{tag}.png")
+
+
 def main():
     parser = argparse.ArgumentParser()
     parser.add_argument("--root", type=Path, default=Path(__file__).resolve().parents[1])
     parser.add_argument("--out", type=Path, default=Path("parhelion-map-previews"))
     parser.add_argument("--no-markers", action="store_true")
+    parser.add_argument("--atlas", action="store_true", help="Produce metatile index atlases")
     args = parser.parse_args()
     out = args.out.resolve()
     out.mkdir(parents=True, exist_ok=True)
     images = [(name,render(args.root,name,out/f"{name}.png",not args.no_markers)) for name in MAPS]
     make_contact(images,out/"all_parhelion_maps.png")
+    if args.atlas:
+        make_metatile_atlas(args.root, out)
     print("Contact sheet:",out/"all_parhelion_maps.png")
 
 
